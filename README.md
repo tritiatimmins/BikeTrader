@@ -1,15 +1,17 @@
 # BikeTrader
 Greenfield Project for Telegraph Academy
-Pithy project description
+
 Team Picnic Summit
 
 
 ## Team
 
-Product Owner: Tritia Timmins
-Scrum Master: Elizabeth Biddlecome
-Lead Developer: DJ Gill
-Development Team Members: Elizabeth Bidlecome, DJ Gill, Trtitia Timmins
+
+  - __Product Owner__: Tritia Timmins
+  - __Scrum Master__: Elizabeth Biddlecome
+  - __Lead Developer__: DJ Gill
+  - __Development Team Members__: Elizabeth Biddlecome, Tritia Timmins, DJ Gill
+
 
 ## Table of Contents
 
