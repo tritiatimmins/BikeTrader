@@ -12,14 +12,6 @@ Greenfield Project for Telegraph Academy
   - __Development Team Members__: Elizabeth Biddlecome, Tritia Timmins, DJ Gill
 
 
-## Table of Contents
-
-Usage 
-Requirements
-Development
-Installing Dependencies
-Tasks
-
 ## Usage
 
 Some usage instructions
