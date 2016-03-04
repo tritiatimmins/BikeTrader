@@ -1,10 +1,9 @@
 # BikeTrader
 Greenfield Project for Telegraph Academy
 
-Team Picnic Summit
 
 
-## Team
+## Team Picnic Summit
 
 
   - __Product Owner__: Tritia Timmins
@@ -26,9 +25,6 @@ Tasks
 Some usage instructions
 Requirements
 
-Node v. xxx
-Express v. xxx
-Etc
 
 
 
