@@ -1,3 +1,4 @@
+
 // model for bike post schema
 var mongoose = require('mongoose');
 
@@ -8,7 +9,8 @@ var bikeSchema = mongoose.schema({
   color: {type: String, default: '', required: true, trim: true, minlength: 3, maxlength: 25},
   // adjust color type? , because we're going to make a dropdown to choose from for color value.
   userId: {type: Number},
-  price: {type: Number, get: getPrice, set: setPrice}
+  price: {type: Number, get: getPrice, set: setPrice},
+  created_at: {type: Date, default: Date.now}
 });
 
 
@@ -20,8 +22,7 @@ var setPrice = function(num) {
   return num * 100;
 };
 
-
-module.exports = mongoose;
+module.exports = mongoose.model('Bikes', bikeSchema);
 
 
 // var user = {
@@ -34,3 +35,4 @@ module.exports = mongoose;
 
 // TODO: set up user schema
   // link userschma via userId to bikeSchema
+
