@@ -9,6 +9,8 @@ var mongoose = require('mongoose');
 // configure and connect to database
 var db = mongoose.connect('mongodb://tritiatimmins:Harley*8@ds019638.mlab.com:19638/tritiadb');
 
+var port = process.env.PORT || 8080; 
+
 // get all data of POST body
 app.use(bodyParser.json());
 
