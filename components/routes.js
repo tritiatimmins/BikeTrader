@@ -1,13 +1,15 @@
 //frontend routes
-angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+angular.module('appRoutes', [])
+
+.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
     $routeProvider
 
         // home page
-        .when('/', {
-            templateUrl: 'index.html',
-            controller: 'MainController'
-        })
+        // .when('/', {
+        //     templateUrl: 'index.html',
+        //     controller: 'MainController'
+        // })
 
         // bike page that will use the BikeController
         .when('/bikes', {

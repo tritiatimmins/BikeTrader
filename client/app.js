@@ -1,1 +1,3 @@
-app.js
+angular.module('bikeTrader', [
+  'appRoutes'
+]);

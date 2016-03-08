@@ -9,7 +9,7 @@ var mongoose = require('mongoose');
 // configure and connect to database
 var db = mongoose.connect('mongodb://tritiatimmins:Harley*8@ds019638.mlab.com:19638/tritiadb');
 
-var port = process.env.PORT || 8080; 
+var port = process.env.PORT || 8080;
 
 // get all data of POST body
 app.use(bodyParser.json());
@@ -25,7 +25,7 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 
 // routes will go here*************************************************
 // set up routes and require here
-require('./components/routes.js')(app);
+require('../components/routes.js')(app);
 
 // start app
 app.listen(port);
