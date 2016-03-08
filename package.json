@@ -11,5 +11,11 @@
     "url": "git+https://github.com/picnicSummit/BikeTrader.git"
   },
  
-  "homepage": "https://github.com/picnicSummit/BikeTrader#readme"
+  "homepage": "https://github.com/picnicSummit/BikeTrader#readme",
+  "dependencies" : {
+    "body-parser": "*",
+    "express": "*",
+    "mongoose": "*",
+    "bcrypt-nodejs": "*"
+  }
 }
