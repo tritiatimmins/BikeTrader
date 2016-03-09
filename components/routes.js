@@ -1,4 +1,5 @@
 //frontend routes
+alert('connected to components/routes.js');
 angular.module('appRoutes', [])
 
 .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
@@ -6,16 +7,16 @@ angular.module('appRoutes', [])
     $routeProvider
 
         // home page
-        // .when('/', {
-        //     templateUrl: 'index.html',
-        //     controller: 'MainController'
-        // })
+        .when('/', {
+            templateUrl: 'sign-up.html',
+            controller: 'signUpController'
+        });
 
         // bike page that will use the BikeController
-        .when('/bikes', {
-            templateUrl: 'views/bikes.html',
-            controller: 'BikeController'
-        });
+        // .when('/bikes', {
+        //     templateUrl: 'views/bikes.html',
+        //     controller: 'BikeController'
+        // });
 
     $locationProvider.html5Mode(true);
 

@@ -1,6 +1,6 @@
-angular.module('bikeTrader', [
-  'ngRoute',
-  'appRoutes'
+var app = angular.module('bikeTrader', [
+  'ngRoute'
+  // 'appRoutes'
 ]);
 
 app.config(['$routeProvider', function($routeProvider) {
@@ -11,3 +11,4 @@ app.config(['$routeProvider', function($routeProvider) {
       controller: 'signUpController'
     });
 }]);
+alert('connected to app.js');
