@@ -25,7 +25,8 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 
 // routes will go here*************************************************
 // set up routes and require here
-require('../components/routes.js')(app);
+// TODO: What is wrong with the line below?
+// require('../components/routes.js')(app);
 
 // start app
 app.listen(port);
