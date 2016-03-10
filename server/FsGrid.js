@@ -1,3 +1,5 @@
+//prototype/draft of how the image storing will work.
+
 var BikeImages = require('mongodb').BikeImages,
 	Grid = mongo.Grid;
 
