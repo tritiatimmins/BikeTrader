@@ -1,5 +1,5 @@
 angular.module('PostCtrl', [])
-.controller('PostController', ['$scope', function($scope) {
+.controller('PostController', ['$scope', 'postService', function($scope, postService) {
 
   $scope.tagline = 'Bike Post Time!';
 
@@ -23,6 +23,7 @@ angular.module('PostCtrl', [])
     // clear the form
     $scope.title = '';
     $scope.description = '';
+    $scope.color = '';
     $scope.price = '';
   };
 
