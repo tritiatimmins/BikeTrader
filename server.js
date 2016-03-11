@@ -9,7 +9,7 @@ var mongoose = require('mongoose');
 // configure and connect to database
 var db = mongoose.connect('mongodb://tritiatimmins:Harley*8@ds019638.mlab.com:19638/tritiadb');
 
-var port = process.env.PORT || 8080; 
+var port = process.env.PORT || 8080;
 
 // get all data of POST body
 app.use(bodyParser.json());
@@ -24,9 +24,16 @@ app.use(bodyParser.urlencoded({extended: true}));
 // override with x-http-method ect
 // app.use(methodOverride('X-HTTP-Method-Override'));
 
+app.use(express.static(__dirname + '/public'));
+
 // routes will go here*************************************************
 // set up routes and require here
+<<<<<<< HEAD:server/server.js
 // require('./components/routes.js')(app);
+=======
+// TODO: What is wrong with the line below?
+require('./app/routes.js')(app);
+>>>>>>> 6192861ab005270114f6f432b0779e973d4a09a0:server.js
 
 // start app
 app.listen(port);
