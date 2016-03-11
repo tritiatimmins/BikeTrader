@@ -1,10 +1,20 @@
 <div class="row">
   <div class="container">
-    <form name="new-post" ng-controller="PostController" novalidate>
-      <input class="new-post" type="text" placeholder="Title" ng-model="post.title" ngMinlength="10" ngMaxlength="30" ng-required></input>
-      <input class="new-post" type="text" placeholder="Description" ng-model="post.description" ngMaxlength="250" ng-required></input>
-      <input class="new-post" type="text" placeholder="Color" ng-model="post.color" ngMinlength="3" ng-required></input>
-      <input class="new-post" type="number" placeholder="Price" ng-model="post.price" ng-required></input>
+  <!-- Form to get post information -->
+    <form name="new-post" ng-controller="PostController as PostCtrl" novalidate>
+      <!-- title -->
+      <input class="new-post" type="text" placeholder="Title" ng-model="title" ngMinlength="10" ngMaxlength="30" ng-required></input>
+      <!-- description -->
+      <input class="new-post" type="text" placeholder="Description" ng-model="description" ngMaxlength="250" ng-required></input>
+      <!-- color dropdown -->
+      <!-- <input class="new-post" type="text" placeholder="Color" ng-model="post.color" ngMinlength="3" ng-required></input> -->
+      <select ng-model="color">
+        <option value="">Color</option>
+        <option ng-repeat="colour in colors">{{ colour }}</option>
+      </select>
+      <!-- price -->
+      <input class="new-post" type="number" placeholder="Price" ng-model="price" ng-required></input>
+      <button class="btn btn-default" ng-click="PostCtrl.formSubmit()">Submit</button>
     </form>
   </div>
   {{ tagline }}
