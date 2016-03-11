@@ -1,4 +1,4 @@
-angular.module('bikeTrader', ['ngRoute', 'HomeCtrl', 'PostCtrl', 'SignUpCtrl', 'LogInCtrl'])
+angular.module('bikeTrader', ['ngRoute', 'HomeCtrl', 'PostCtrl', 'SignUpCtrl', 'LogInCtrl', 'ngFileUpload'])
 .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
   $routeProvider
     // nerds page that will use the NerdController
