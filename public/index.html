@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="libs/angular/angular.js"></script>
+    <link rel="stylesheet" src="libs/bootstrap/dist/css/bootstrap.css"
+    <title>Bike Trader</link>
+</head>
+<body ng-app="bikeTrader">
+
+  trading bikes!
+  <h1>hello from the index page</h1>
+  <div ng-view></div>
+  <p> {{ tagline }} </p>
+
+    <script src="libs/angular-mocks/angular-mocks.js"></script>
+    <script src="libs/angular-route/angular-route.js"></script>
+    <script src="js/controllers/PostCtrl.js"></script>
+    <script src="js/controllers/HomeCtrl.js"></script>
+    <!-- appRoutes doesn't seem to be doing anything? So I commented the connection out -->
+    <!-- <script src="js/appRoutes.js"></script> -->
+    <script src="js/app.js"></script>
+</body>
+</html>
