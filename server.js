@@ -6,6 +6,11 @@ var bodyParser = require('body-parser');
 // var methodOverride = require('method-override');
 var mongoose = require('mongoose');
 
+//middleware for images
+var multipart = require('connect-multiparty');
+var multipartMiddleware = multipart();
+
+
 // configure and connect to database
 var db = mongoose.connect('mongodb://tritiatimmins:Harley*8@ds019638.mlab.com:19638/tritiadb');
 
@@ -28,12 +33,14 @@ app.use(express.static(__dirname + '/public'));
 
 // routes will go here*************************************************
 // set up routes and require here
-<<<<<<< HEAD:server/server.js
+
 // require('./components/routes.js')(app);
-=======
+
 // TODO: What is wrong with the line below?
 require('./app/routes.js')(app);
->>>>>>> 6192861ab005270114f6f432b0779e973d4a09a0:server.js
+
+// uncomment after upload is defined
+// app.post('/upload', multipartMiddleware,upload);
 
 // start app
 app.listen(port);

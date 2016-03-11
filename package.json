@@ -15,13 +15,11 @@
     "bcrypt-nodejs": "*",
     "body-parser": "*",
     "express": "*",
-<<<<<<< HEAD
     "mongoose": "*",
     "bcrypt-nodejs": "*",
-    "ng-file-upload": "*"
-=======
+    "ng-file-upload": "*",
     "method-override": "^2.3.5",
-    "mongoose": "*"
->>>>>>> 6192861ab005270114f6f432b0779e973d4a09a0
+    "connect-multiparty": "*"
+  
   }
 }
