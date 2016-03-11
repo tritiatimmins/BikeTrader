@@ -18,7 +18,7 @@ Icon
 bower_components
 node_modules/
 db/
-client/libs
+public/libs
 
 # Floobits
 .floo
