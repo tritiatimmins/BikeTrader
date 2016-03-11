@@ -34,7 +34,7 @@ mongoose.connection.on('open', function () {
     // store an img in binary in mongo
     var a = new A;
     a.img.data = fs.readFileSync(imgPath);
-    a.img.contentType = 'image/png';
+    a.img.contentType = 'image/jpeg';
     a.save(function (err, a) {
       if (err) throw err;
 

@@ -16,6 +16,7 @@
     "body-parser": "*",
     "express": "*",
     "mongoose": "*",
-    "bcrypt-nodejs": "*"
+    "bcrypt-nodejs": "*",
+    "ng-file-upload": "*"
   }
 }
