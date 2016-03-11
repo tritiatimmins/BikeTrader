@@ -11,12 +11,12 @@ angular.module('bikeTrader', ['ngRoute', 'HomeCtrl', 'PostCtrl'])
     .when('/post', {
       templateUrl: 'views/new-post.html',
       controller: 'PostController'
-    });
+    })
 
-    // .when('*', {
-    //   templateUrl: '/views/new-post.html',
-    //   controller: 'PostController'
-    // });
+    .when('*', {
+      templateUrl: 'views/home.html',
+      controller: 'HomeController'
+    });
 
   // $locationProvider.html5Mode(true);
 
