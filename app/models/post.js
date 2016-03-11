@@ -1,6 +1,5 @@
 // grab the mongoose model
 var mongoose = require('mongoose');
-var fs = require('fs');
 
 //middleware for images
 var multipart = require('connect-multiparty');
@@ -15,7 +14,7 @@ var postSchema = new mongoose.Schema({
   description: String,
   color: String,
   price: Number,
-  image: {data: Buffer, contentType: String}
+  //store the ID of the image
 });
 //step two, export a model 
 module.exports = mongoose.model('Post', postSchema);
