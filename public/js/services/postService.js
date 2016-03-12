@@ -12,9 +12,21 @@
       });
     };
 
+    var showBikes = function() {
+      return $http({
+        method: 'GET',
+        url: '/api/feed',
+      })
+      .then(function(resp) {
+      console.log('getting posts', resp.data);
+        return resp.data;
+      });
+    };
+
     return {
 
-      postAd: postAd
+      postAd: postAd,
+      showBikes: showBikes
 
     };
     

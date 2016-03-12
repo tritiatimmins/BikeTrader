@@ -51,6 +51,22 @@ app.post('/api/post', function(req, res, next) {
 });
 
 
+// app.get('/api/posts', function (req, res, next) {
+//   Post.find(function(err, posts) {
+//     if (err) { return next(err) }
+//     res.json(posts)
+//   })
+// })
+
+app.get('/api/feed', function (req, res, next) {
+  Post.find(function(err, posts) {
+    if(err) {return next (err)}
+      res.json(posts);
+  })
+  console.log('feed', Post);
+})
+
+
 // uncomment after upload is defined
 // app.post('/upload', multipartMiddleware,upload);
 
