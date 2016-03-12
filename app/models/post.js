@@ -1,7 +1,7 @@
 // grab the mongoose model
 var mongoose = require('mongoose');
 
-// define nerd model
+// define ad post model
 module.exports = mongoose.model('AdPost', {
   _id: {type: Number},
   title: {type: String, default: '', required: true, trim: true, minlength: 10, maxlength: 25},
