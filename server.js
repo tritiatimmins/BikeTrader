@@ -27,8 +27,7 @@ app.use(express.static(__dirname + '/public'));
 
 // routes will go here*************************************************
 // set up routes and require here
-// TODO: What is wrong with the line below?
-require('./app/routes.js')(app);
+
 
 // start app
 app.listen(port);
