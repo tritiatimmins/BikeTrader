@@ -8,6 +8,7 @@ angular.module('PostCtrl', [])
         $scope.errFile = errFiles && errFiles[0];
         if (file) {
             file.upload = Upload.upload({
+                //make this go to our server, on our server upload should be a route
                 url: 'https://angular-file-upload-cors-srv.appspot.com/upload',
                 data: {file: file}
             });
