@@ -28,6 +28,18 @@ app.use(express.static(__dirname + '/public'));
 
 // routes will go here*************************************************
 // set up routes and require here
+
+// route for getting all bike listings
+app.get('/api/feed', function(req, res, next) {
+  Post.find(function(err, posts) {
+    if (err) { return next (err); }
+    // console.log('posts', posts);
+    res.json(posts);
+  });
+});
+
+
+// route for creating a new bike listing
 app.post('/api/post', function(req, res, next) {
   
   var newPost = new Post({

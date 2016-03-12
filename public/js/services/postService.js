@@ -1,6 +1,6 @@
  // Service to send posts to database
  angular.module('postService', [])
-  .service('PostAd', ['$http', function($http) {
+  .factory('PostAd', ['$http', function($http) {
 
     var postAd = function(post) {
       console.log('success@!!@!@!@', post);
@@ -12,9 +12,22 @@
       });
     };
 
+    var showBikes = function() {
+
+      return $http({
+        method: 'GET',
+        url: '/api/feed'
+      })
+      .then(function(resp) {
+        return resp.data;
+      });
+
+    };
+
     return {
 
-      postAd: postAd
+      postAd: postAd,
+      showBikes: showBikes
 
     };
     
