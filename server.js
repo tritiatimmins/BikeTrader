@@ -28,9 +28,6 @@ app.use(express.static(__dirname + '/public'));
 
 // routes will go here*************************************************
 // set up routes and require here
-<<<<<<< HEAD
-// TODO: What is wrong with the line below?
-=======
 app.post('/api/post', function(req, res, next) {
   
   var newPost = new Post({
@@ -46,7 +43,6 @@ app.post('/api/post', function(req, res, next) {
   console.log('newPost', newPost);
 
 });
->>>>>>> b241ada3af2e44e7da40dcbe0937a1ad6ac45a4a
 
 // start app
 app.listen(port);
