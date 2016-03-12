@@ -27,7 +27,9 @@ app.use(express.static(__dirname + '/public'));
 
 // routes will go here*************************************************
 // set up routes and require here
-
+app.post('/api/post', function(req, res) {
+  res.json(req.body);
+});
 
 // start app
 app.listen(port);
