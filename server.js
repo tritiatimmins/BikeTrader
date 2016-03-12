@@ -5,9 +5,10 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var mongoose = require('mongoose');
+var Post = require('./app/models/post.js');
 
 // configure and connect to database
-var db = mongoose.connect('mongodb://tritiatimmins:Harley*8@ds019638.mlab.com:19638/tritiadb');
+var db = mongoose.connect('mongodb://tritiatimmins:Harley*8@ds019658.mlab.com:19658/biketrader');
 
 var port = process.env.PORT || 8080;
 
@@ -27,8 +28,21 @@ app.use(express.static(__dirname + '/public'));
 
 // routes will go here*************************************************
 // set up routes and require here
-// TODO: What is wrong with the line below?
-require('./app/routes.js')(app);
+app.post('/api/post', function(req, res, next) {
+  
+  var newPost = new Post({
+    title: req.body.title,
+    description: req.body.description,
+    color: req.body.color,
+    price: req.body.price
+  });
+  newPost.save(function(err, newPost) {
+    if (err) { return next(err); }
+    res.json(req.body);
+  });
+  console.log('newPost', newPost);
+
+});
 
 // start app
 app.listen(port);

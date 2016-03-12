@@ -1,5 +1,5 @@
 angular.module('PostCtrl', [])
-.controller('PostController', ['$scope', 'postService', function($scope, postService) {
+.controller('PostController', ['$scope', 'PostAd', function($scope, PostAd) {
 
   $scope.tagline = 'Bike Post Time!';
 
@@ -25,6 +25,8 @@ angular.module('PostCtrl', [])
     $scope.description = '';
     $scope.color = '';
     $scope.price = '';
+
+    PostAd.postAd(post);
   };
 
 
