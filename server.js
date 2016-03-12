@@ -33,12 +33,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/public'));
 
 // routes will go here*************************************************
-// set up routes and require here
-
-// require('./components/routes.js')(app);
-
-// TODO: What is wrong with the line below?
-require('./app/routes.js')(app);
 
 app.post('/api/post', function(req, res, next) {
   
