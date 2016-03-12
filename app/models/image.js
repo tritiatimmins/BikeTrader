@@ -22,6 +22,7 @@ var imageSchema = new mongoose.Schema({
 var Image = mongoose.model('Image', imageSchema);
 
 mongoose.connection.on('open', function(){
+	
 	console.error('mongo is open');
 
 	//empty the collection
