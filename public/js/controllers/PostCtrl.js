@@ -18,9 +18,6 @@ angular.module('PostCtrl', [])
     post.color = $scope.color;
     post.price = $scope.price;
 
-    // double check
-    console.log('post object', post);
-
     // clear the form
     $scope.title = '';
     $scope.description = '';
