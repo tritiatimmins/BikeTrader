@@ -1,5 +1,5 @@
-angular.module('PostCtrl', [])
-.controller('PostController', ['$scope', 'PostAd', function($scope, PostAd) {
+angular.module('PostCtrl', ['ngFileUpload'])
+.controller('PostController', ['$scope', '$timeout', 'PostAd', 'Upload', function($scope, $timeout, PostAd, Upload) {
 
   $scope.tagline = 'Bike Post Time!';
 
@@ -16,6 +16,7 @@ angular.module('PostCtrl', [])
     post.description = $scope.description;
     post.color = $scope.color;
     post.price = $scope.price;
+    post.picFile = $scope.picFile;
 
     // clear the form
     $scope.title = '';
@@ -24,6 +25,29 @@ angular.module('PostCtrl', [])
     $scope.price = '';
 
     PostAd.postAd(post);
+  };
+
+  // upload pics
+  $scope.uploadPic = function(file) {
+    console.log('upload attempt begun');
+    Upload.upload({
+      url: '/api/post',
+      method: 'POST',
+      data: file
+    })
+
+    .then(function (response) {
+      $timeout(function () {
+        file.result = response.data;
+      });
+    }, function (response) {
+      if (response.status > 0) {
+        $scope.errorMsg = response.status + ': ' + response.data;
+      }
+    }, function (evt) {
+      // Math.min is to fix IE which reports 200% sometimes
+      file.progress = Math.min(100, parseInt(100.0 * evt.loaded / evt.total));
+    });
   };
 
 
