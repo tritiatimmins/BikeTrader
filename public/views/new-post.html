@@ -1,21 +1,6 @@
 <div class="row">
   <div class="container">
-<<<<<<< HEAD
-    <form name="new-post" ng-controller="PostController" novalidate>
-      <input class="new-post" type="text" placeholder="Title" ng-model="post.title" ngMinlength="10" ngMaxlength="30" ng-required></input>
-      <input class="new-post" type="text" placeholder="Description" ng-model="post.description" ngMaxlength="250" ng-required></input>
-      <input class="new-post" type="text" placeholder="Color" ng-model="post.color" ngMinlength="3" ng-required></input>
-      <input class="new-post" type="number" placeholder="Price" ng-model="post.price" ng-required></input>
-   
-    <button type="file" ngf-select="uploadFiles($file, $invalidFiles)" accept="image/*" ngf-max-height="1000" ngf-max-size="1MB">Upload Photo</button> 
-    <br><br>
-    	<div style="font:smaller">{{f.name}} {{errFile.name}} {{errFile.$error}} {{errFile.$errorParam}} 
-    		<span class="progress" ng-show="f.progress >=0">
-    			<div style="width:{{f.progress}}%" ng-bind="f.progress + '%'"></div>
-    		</span>
-    	</div>
-   	{{errorMsg}}
-=======
+
   <!-- Form to get post information -->
     <form name="new-post" ng-controller="PostController as PostCtrl" novalidate>
       <!-- title -->
@@ -30,7 +15,7 @@
       <!-- price -->
       <input class="new-post" type="number" placeholder="Price" ng-model="price" ng-required></input>
       <button class="btn btn-default" ng-click="PostCtrl.formSubmit()">Submit</button>
->>>>>>> e5ee0be5e57d0973d6e9a9fd88b4717dfed02605
+
     </form>
   </div>
   {{ tagline }}

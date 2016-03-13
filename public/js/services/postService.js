@@ -13,7 +13,6 @@
     };
 
     var showBikes = function() {
-
       return $http({
         method: 'GET',
         url: '/api/feed',
