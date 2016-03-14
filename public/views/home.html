@@ -6,7 +6,10 @@
       color: {{ post.color }} <br />
       {{ post.description }} 
     </p>
-    {{ post.picFile }}
+    
+    <!-- <div class="container" data-ng-show=""></div> -->
+    
+    <img ng-src="{{ post.picFile }}" height="100px" />
   </div>
   <p>{{ tagline }}</p>
 </div>

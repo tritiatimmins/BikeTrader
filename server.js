@@ -23,7 +23,7 @@ app.use(bodyParser.json({type: 'application/vnd.api+json'}));
 // parse app/w-www
 app.use(bodyParser.urlencoded({extended: true}));
 
-// override with x-http-method ect
+// override with x-http-method 
 app.use(methodOverride('X-HTTP-Method-Override'));
 
 app.use(express.static(__dirname + '/public'));
@@ -72,6 +72,7 @@ app.post('/api/post', multipartMiddleWare, function(req, res, next) {
     picFile: req.body.picFile
   });
   console.log('\n\n\n newPost', newPost, '\n\n\n');
+  console.log('\n\n\n\n%%%%%%%%%%%%%%%%  req', body, '\n\n\n\n$$$$$$$$$$$$$$');
   newPost.save(function(err, newPost) {
     if (err) { return next(err); }
     res.json(req.body);

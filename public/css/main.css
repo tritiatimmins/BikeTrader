@@ -1,0 +1,7 @@
+#filePicker {
+  position: absolute;
+  display: inline-block;
+  left: 200px;
+  top: 100px;
+  z-index: 10000 !important;
+}

@@ -7,7 +7,7 @@ angular.module('PostCtrl', ['ngFileUpload'])
   $scope.colors = ['red', 'blue', 'green', 'yellow', 'black', 'white', 'gray', 'orange', 'purple'];
 
   // new post object
-  var post = {};
+  post = {};
 
   this.formSubmit = function() {
 
@@ -16,39 +16,44 @@ angular.module('PostCtrl', ['ngFileUpload'])
     post.description = $scope.description;
     post.color = $scope.color;
     post.price = $scope.price;
-    post.picFile = $scope.picFile;
+    post.email = $scope.email;
+    // post.picFile = $scope.picFile;
+    
 
+    /*  console.log('$scope.picFile ********************', $scope.picFile.toString());
+    post.picFile = $base64.encode($scope.picFile);
+    */
     // clear the form
     $scope.title = '';
     $scope.description = '';
     $scope.color = '';
     $scope.price = '';
-
+    $scope.email = '';
     PostAd.postAd(post);
   };
 
-  // upload pics
-  $scope.uploadPic = function(file) {
-    console.log('upload attempt begun');
-    Upload.upload({
-      url: '/api/post',
-      method: 'POST',
-      data: file
-    })
+  // // upload pics
+  // $scope.uploadPic = function(file) {
+  //   console.log('upload attempt begun', file);
+  //   Upload.upload({
+  //     url: '/api/post',
+  //     method: 'POST',
+  //     data: file
+  //   })
 
-    .then(function (response) {
-      $timeout(function () {
-        file.result = response.data;
-      });
-    }, function (response) {
-      if (response.status > 0) {
-        $scope.errorMsg = response.status + ': ' + response.data;
-      }
-    }, function (evt) {
-      // Math.min is to fix IE which reports 200% sometimes
-      file.progress = Math.min(100, parseInt(100.0 * evt.loaded / evt.total));
-    });
-  };
+  //   .then(function (response) {
+  //     $timeout(function () {
+  //       file.result = response.data;
+  //     });
+  //   }, function (response) {
+  //     if (response.status > 0) {
+  //       $scope.errorMsg = response.status + ': ' + response.data;
+  //     }
+  //   }, function (evt) {
+  //     // Math.min is to fix IE which reports 200% sometimes
+  //     file.progress = Math.min(100, parseInt(100.0 * evt.loaded / evt.total));
+  //   });
+  // };
 
 
 
