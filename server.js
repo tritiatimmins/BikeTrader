@@ -69,7 +69,8 @@ app.post('/api/post', multipartMiddleWare, function(req, res, next) {
     description: req.body.description,
     color: req.body.color,
     price: req.body.price,
-    picFile: req.body.picFile
+    picFile: req.body.picFile,
+    email: req.body.email
   });
   console.log('\n\n\n newPost', newPost, '\n\n\n');
   // console.log('\n\n\n\n%%%%%%%%%%%%%%%%  req', body, '\n\n\n\n$$$$$$$$$$$$$$');

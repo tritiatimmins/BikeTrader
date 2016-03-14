@@ -16,7 +16,8 @@ angular.module('PostCtrl', ['ngFileUpload'])
     post.color = $scope.color;
     post.price = $scope.price;
     post.email = $scope.email;
-    // post.picFile = $scope.picFile;
+    post.picFile = $scope.picFile;
+    post.dateCreated = Date.now();
     
 
     console.log('form submit called', post);

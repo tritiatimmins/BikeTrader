@@ -1,15 +1,15 @@
 <div class="jumbotron text-center" ng-controller="HomeController as HomeCtrl">
-  <h1>Home Page 4 Life</h1>
-  <div ng-repeat="post in data.posts">
-    <h3>{{ post.title }} &nbsp ${{ post.price }}</h3>
-    <p>
-      color: {{ post.color }} <br />
-      {{ post.description }} 
-    </p>
-    
-    <!-- <div class="container" data-ng-show=""></div> -->
-    
-    <img ng-src="{{ post.picFile }}" height="100px" />
+  <div ng-repeat="post in data.posts | orderBy:'dateCreated':reverse" class="container">
+    <div class="ad">
+      <h3>{{ post.title }} &nbsp ${{ post.price }}</h3>
+      <h4>Date Posted: {{ post.dateCreated | date : 'MM/dd/yyyy @ h:mma' }}</h4>
+      <img ng-src="{{ post.picFile }}" height="200px" />
+      <br />
+      <p>
+        Color: {{ post.color }} <br />
+        {{ post.description }} <br />
+        <a href="mailto:{{ post.email }}">Contact</a>
+      </p>
+    </div>
   </div>
-  <p>{{ tagline }}</p>
 </div>

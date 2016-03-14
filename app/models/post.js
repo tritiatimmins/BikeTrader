@@ -11,7 +11,8 @@ var postSchema = new mongoose.Schema({
   // adjust color type? , because we're going to make a dropdown to choose from for color value.
   price: {type: Number},
   picFile: {type: String},
-  email: {type: String}
+  email: {type: String},
+  dateCreated: {type: String}
 });
 
 module.exports = mongoose.model('Post', postSchema);

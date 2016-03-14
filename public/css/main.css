@@ -5,3 +5,11 @@
   top: 100px;
   z-index: 10000 !important;
 }
+
+.ng-invalid {
+  border-color: #FA787E;
+}
+.ng-valid.ng-dirty {
+  border-color: #78FA89;
+}
+.ng-
