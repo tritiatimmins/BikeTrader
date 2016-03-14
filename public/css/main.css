@@ -1,7 +1,15 @@
-#filePicker {
-  position: absolute;
-  display: inline-block;
-  left: 200px;
-  top: 100px;
-  z-index: 10000 !important;
+/**/
+
+
+.ad {
+  /*position: absolute;*/
+  /*left: 100px;*/
+  width: 90%;
+  background-color: #89ABE3;
+  background-opacity: 0.5;
+  border-style: solid;
+  border-radius: 20px;
+  border-color: black;
+  border-width: 2px;
+  margin: 1px;
 }

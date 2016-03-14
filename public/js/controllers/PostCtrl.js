@@ -1,12 +1,13 @@
-angular.module('PostCtrl', ['ngFileUpload'])
-.controller('PostController', ['$scope', '$timeout', 'PostAd', 'Upload', function($scope, $timeout, PostAd, Upload) {
+angular.module('PostCtrl', [])
+.controller('PostController', ['$scope', '$timeout', 'PostAd', function($scope, $timeout, PostAd) {
 
   $scope.tagline = 'Bike Post Time!';
 
   // colors for dropdown
-  $scope.colors = ['red', 'blue', 'green', 'yellow', 'black', 'white', 'gray', 'orange', 'purple'];
+  $scope.colors = ['red', 'blue', 'green', 'yellow', 'black', 'magenta', 'gold', 'rainbow', 'silver', 'white', 'gray', 'orange', 'purple'];
 
   // new post object
+  // TODO: does this have to be a global property?
   post = {};
 
   this.formSubmit = function() {
@@ -16,13 +17,8 @@ angular.module('PostCtrl', ['ngFileUpload'])
     post.color = $scope.color;
     post.price = $scope.price;
     post.email = $scope.email;
-    // post.picFile = $scope.picFile;
-    
+    post.dateCreated = Date.now();    
 
-    console.log('form submit called', post);
-    /*  console.log('$scope.picFile ********************', $scope.picFile.toString());
-    post.picFile = $base64.encode($scope.picFile);
-    */
     // clear the form
     $scope.title = '';
     $scope.description = '';
@@ -31,30 +27,5 @@ angular.module('PostCtrl', ['ngFileUpload'])
     $scope.email = '';
     PostAd.postAd(post);
   };
-
-  // // upload pics
-  // $scope.uploadPic = function(file) {
-  //   console.log('upload attempt begun', file);
-  //   Upload.upload({
-  //     url: '/api/post',
-  //     method: 'POST',
-  //     data: file
-  //   })
-
-  //   .then(function (response) {
-  //     $timeout(function () {
-  //       file.result = response.data;
-  //     });
-  //   }, function (response) {
-  //     if (response.status > 0) {
-  //       $scope.errorMsg = response.status + ': ' + response.data;
-  //     }
-  //   }, function (evt) {
-  //     // Math.min is to fix IE which reports 200% sometimes
-  //     file.progress = Math.min(100, parseInt(100.0 * evt.loaded / evt.total));
-  //   });
-  // };
-
-
 
 }]);
