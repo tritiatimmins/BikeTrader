@@ -1,4 +1,4 @@
-angular.module('bikeTrader', ['ngRoute', 'postService', 'HomeCtrl', 'PostCtrl', 'SignUpCtrl', 'LogInCtrl'])
+angular.module('bikeTrader', ['angular-filepicker', 'ngRoute', 'postService', 'HomeCtrl', 'PostCtrl', 'SignUpCtrl', 'LogInCtrl', 'PhotoCtrl'])
 
 .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
   $routeProvider

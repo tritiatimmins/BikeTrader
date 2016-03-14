@@ -14,12 +14,11 @@
   "dependencies": {
     "bcrypt-nodejs": "*",
     "body-parser": "*",
+    "connect-multiparty": "*",
     "express": "*",
-    "mongoose": "*",
-    "bcrypt-nodejs": "*",
-    "ng-file-upload": "*",
+    "fs": "0.0.2",
     "method-override": "^2.3.5",
-    "connect-multiparty": "*"
-  
+    "mongoose": "*",
+    "ng-file-upload": "*"
   }
 }

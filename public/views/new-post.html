@@ -16,7 +16,10 @@
       <input class="new-post" type="number" placeholder="Price" ng-model="price" ng-required></input>
       <button class="btn btn-default" ng-click="PostCtrl.formSubmit()">Submit</button>
 
+      <file-picker data-fp-services="computer,facebook,dropbox,box" on-success="onSuccess(event.fpfile)" />
+
+
     </form>
   </div>
-  {{ tagline }}
+
 </div>

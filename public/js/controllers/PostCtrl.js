@@ -27,5 +27,7 @@ angular.module('PostCtrl', [])
     PostAd.postAd(post);
   };
 
+
+
 }]);
 

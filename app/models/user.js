@@ -4,10 +4,10 @@ var mongoose = require('mongoose');
 
 //make a user schema
 var userSchema = new mongoose.Schema({
-	username: String,
-	password: String,
-	email: String,
-	phoneNumber: Number
+  username: String,
+  password: String,
+  email: String,
+  phoneNumber: Number
 });
 
 //export the User model

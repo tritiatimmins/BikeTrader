@@ -17,6 +17,8 @@ var db = mongoose.connect('mongodb://tritiatimmins:Harley*8@ds019658.mlab.com:19
 
 var port = process.env.PORT || 8080;
 
+app.enable('trust proxy');
+
 // get all data of POST body
 app.use(bodyParser.json());
 
@@ -31,6 +33,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 // app.use(methodOverride('X-HTTP-Method-Override'));
 
 app.use(express.static(__dirname + '/public'));
+
+
 
 // routes will go here*************************************************
 
