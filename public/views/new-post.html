@@ -16,7 +16,9 @@
       <input class="new-post" type="number" placeholder="Price" ng-model="price" ng-required>
       <!-- email -->
       <input type="email" placeholder="Email" ng-model="email" ng-required>
-     
+      <!-- image upload with filePicker -->
+      <upload-image data-fp-apikey="AORPJD9DRVaMtIJZPTMWPz" data-fp-mimetypes="*/*" data-fp-container="modal" onchange="post.picFile = event.fpfile.url"></upload-image>
+
       <!-- image upload -->
       <!-- <input id="filePicker" ng-controller="navController" type="filepicker" data-fp-apikey="AORPJD9DRVaMtIJZPTMWPz" on-success="post.picFile = event.fpfile.url"> -->
 

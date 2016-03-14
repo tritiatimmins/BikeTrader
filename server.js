@@ -41,23 +41,23 @@ app.get('/api/feed', function(req, res, next) {
 });
 
 
-// var multipart = require('connect-multiparty');
+var multipart = require('connect-multiparty');
 
-// app.use(multipart({
-//   uploadDir: '/api/post'
-// }));
+app.use(multipart({
+  uploadDir: '/api/post'
+}));
 
 
 // // create file upload
-// exports.create = function(req, res, next) {
-//   var data = _.pick(req.body, 'type');
-//   var uploadPath = path.normalize(fcg.data + '/uploads');
-//   var file = req.files.file;
+exports.create = function(req, res, next) {
+  var data = _.pick(req.body, 'type');
+  var uploadPath = path.normalize(fcg.data + '/uploads');
+  var file = req.files.file;
 
 //   console.log('file.name', file.name); //original file name
 //   console.log('file.path', file.path); //tmp path
 //   console.log('uploadPath', uploadPath); // uploads directory
-// };
+};
 
 
 // route for creating a new bike listing
@@ -72,7 +72,7 @@ app.post('/api/post', multipartMiddleWare, function(req, res, next) {
     picFile: req.body.picFile
   });
   console.log('\n\n\n newPost', newPost, '\n\n\n');
-  console.log('\n\n\n\n%%%%%%%%%%%%%%%%  req', body, '\n\n\n\n$$$$$$$$$$$$$$');
+  // console.log('\n\n\n\n%%%%%%%%%%%%%%%%  req', body, '\n\n\n\n$$$$$$$$$$$$$$');
   newPost.save(function(err, newPost) {
     if (err) { return next(err); }
     res.json(req.body);

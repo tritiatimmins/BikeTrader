@@ -10,7 +10,6 @@ angular.module('PostCtrl', ['ngFileUpload'])
   post = {};
 
   this.formSubmit = function() {
-
     // get the values from the post form and add them to the post object
     post.title = $scope.title;
     post.description = $scope.description;
@@ -20,6 +19,7 @@ angular.module('PostCtrl', ['ngFileUpload'])
     // post.picFile = $scope.picFile;
     
 
+    console.log('form submit called', post);
     /*  console.log('$scope.picFile ********************', $scope.picFile.toString());
     post.picFile = $base64.encode($scope.picFile);
     */
