@@ -4,7 +4,6 @@ var mongoose = require('mongoose');
 var postSchema = new mongoose.Schema({
   
   title: {type: String, default: '', required: true, trim: true, maxlength: 25},
-
   description: {type: String, default: '', required: true, trim: true, minlength: 3, maxlength: 250},
   color: {type: String, default: '', required: true, trim: true, minlength: 3, maxlength: 25},
   price: {type: Number},
