@@ -12,13 +12,12 @@
   },
   "homepage": "https://github.com/picnicSummit/BikeTrader#readme",
   "dependencies": {
-    "bcrypt-nodejs": "*",
     "body-parser": "*",
     "connect-multiparty": "*",
     "express": "*",
     "fs": "0.0.2",
     "method-override": "^2.3.5",
     "mongoose": "*",
-    "ng-file-upload": "*"
+    "mongoose-file": "0.0.2"
   }
 }

@@ -2,8 +2,9 @@
  angular.module('postService', [])
   .factory('PostAd', ['$http', function($http) {
 
+    // routing for posts
+
     var postAd = function(post) {
-      console.log('success@!!@!@!@', post);
       
       return $http({
         method: 'POST',

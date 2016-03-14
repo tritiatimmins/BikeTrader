@@ -1,8 +1,8 @@
-angular.module('bikeTrader', ['angular-filepicker', 'ngRoute', 'postService', 'HomeCtrl', 'PostCtrl', 'SignUpCtrl', 'LogInCtrl', 'PhotoCtrl'])
-
-.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+angular.module('bikeTrader', ['ngRoute', 'angular-filepicker', 'postService', 'HomeCtrl', 'PostCtrl', 'SignUpCtrl', 'LogInCtrl', 'ImageCtrl'])
+.config(['$routeProvider', function($routeProvider) {
   $routeProvider
-    // nerds page that will use the NerdController
+
+    // front end routes
     
     .when('/', {
       templateUrl: 'views/home.html',
@@ -28,7 +28,5 @@ angular.module('bikeTrader', ['angular-filepicker', 'ngRoute', 'postService', 'H
       templateUrl: 'views/home.html',
       controller: 'HomeController'
     });
-
-  // $locationProvider.html5Mode(true);
 
 }]);

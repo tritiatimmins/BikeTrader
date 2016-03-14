@@ -1,25 +1,28 @@
-<div class="row">
-  <div class="container">
 
-  <!-- Form to get post information -->
-    <form name="new-post" ng-controller="PostController as PostCtrl" novalidate>
+<div class="row" ng-controller="PostController as PostCtrl">
+  <div class="container">
+    <!-- Form to get post information -->
+    <form name="new-post" data-toggle="">
       <!-- title -->
-      <input class="new-post" type="text" placeholder="Title" ng-model="title" ngMinlength="10" ngMaxlength="30" ng-required></input>
+      <input class="new-post" type="text" placeholder="Title" ng-model="title" ngMinlength="10" ngMaxlength="30" ng-required>
       <!-- description -->
-      <input class="new-post" type="text" placeholder="Description" ng-model="description" ngMaxlength="250" ng-required></input>
+      <input class="new-post" type="text" placeholder="Description" ng-model="description" ngMaxlength="250" ng-required>
       <!-- color dropdown -->
       <select ng-model="color">
         <option value="">Color</option>
         <option ng-repeat="colour in colors">{{ colour }}</option>
       </select>
       <!-- price -->
-      <input class="new-post" type="number" placeholder="Price" ng-model="price" ng-required></input>
+      <input class="new-post" type="number" placeholder="Price" ng-model="price" ng-required>
+      <!-- email -->
+      <input type="email" placeholder="Email" ng-model="email" ng-required>
+      <!-- image upload with filePicker -->
+      <upload-image data-fp-apikey="AORPJD9DRVaMtIJZPTMWPz" data-fp-mimetypes="*/*" data-fp-container="modal" onchange="post.picFile = event.fpfile.url"></upload-image>
+
+      <!-- submit button -->
       <button class="btn btn-default" ng-click="PostCtrl.formSubmit()">Submit</button>
-
-      <file-picker data-fp-services="computer,facebook,dropbox,box" on-success="onSuccess(event.fpfile)" />
-
 
     </form>
   </div>
-
 </div>
+

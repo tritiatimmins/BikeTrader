@@ -1,10 +1,11 @@
 angular.module('HomeCtrl', [])
 .controller('HomeController', ['$scope', 'PostAd', function($scope, PostAd) {
 
-  $scope.tagline = 'Bike Feed Goes Here!';
-  // $scope.posts = PostAd.showBikes()
-  
+  // object where feed data from database is populated
+
   $scope.data = {};
+
+  // calls function from postService
   $scope.getPosts = function() {
     PostAd.showBikes()
       .then(function(posts) {
@@ -18,7 +19,5 @@ angular.module('HomeCtrl', [])
   
   $scope.getPosts();
 
-  //call the function from the factory here
-  // PostAd.showBikes();
 
 }]);

@@ -5,12 +5,17 @@ var path = require('path');
 var bodyParser = require('body-parser');
 // var methodOverride = require('method-override');
 var mongoose = require('mongoose');
+// var Post refers to mongoose model post.js
 var Post = require('./app/models/post.js');
 
 //middleware for images
 var multipart = require('connect-multiparty');
 var multipartMiddleware = multipart();
 
+// necessary for file uploading
+// TODO: implement file uploading to use, install connect-multiparty
+// var multipart = require('connect-multiparty');
+// var multipartMiddleWare = multipart();
 
 // configure and connect to database
 var db = mongoose.connect('mongodb://tritiatimmins:Harley*8@ds019658.mlab.com:19658/biketrader');
@@ -29,11 +34,11 @@ app.use(bodyParser.json({type: 'application/vnd.api+json'}));
 app.use(bodyParser.urlencoded({extended: true}));
 
 
-// override with x-http-method ect
-// app.use(methodOverride('X-HTTP-Method-Override'));
+// override with x-http-method 
+app.use(methodOverride('X-HTTP-Method-Override'));
+
 
 app.use(express.static(__dirname + '/public'));
-
 
 
 // routes will go here*************************************************
@@ -48,21 +53,24 @@ app.get('/api/feed', function(req, res, next) {
 });
 
 
-// route for creating a new bike listing
+// route for creating a new bike listing in mongo database
 
 app.post('/api/post', function(req, res, next) {
-  
+
   var newPost = new Post({
     title: req.body.title,
     description: req.body.description,
     color: req.body.color,
-    price: req.body.price
+    price: req.body.price,
+    picFile: req.body.picFile,
+    email: req.body.email,
+    dateCreated: req.body.dateCreated
   });
+ 
   newPost.save(function(err, newPost) {
     if (err) { return next(err); }
     res.json(req.body);
   });
-  console.log('newPost', newPost);
 
 });
 
