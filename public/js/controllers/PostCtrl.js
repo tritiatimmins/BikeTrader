@@ -16,7 +16,7 @@ angular.module('PostCtrl', ['ngFileUpload'])
     post.color = $scope.color;
     post.price = $scope.price;
     post.email = $scope.email;
-    post.picFile = $scope.picFile;
+    post.picFile = $scope.picFile || 'https://media.giphy.com/media/YFxJ7u3FdCrdK/giphy.gif';
     post.dateCreated = Date.now();
     
 
