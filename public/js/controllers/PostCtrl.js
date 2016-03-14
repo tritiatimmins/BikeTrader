@@ -17,8 +17,9 @@ angular.module('PostCtrl', [])
     post.color = $scope.color;
     post.price = $scope.price;
     post.email = $scope.email;
-    post.dateCreated = Date.now();    
-
+    post.picFile = $scope.picFile || 'https://media.giphy.com/media/YFxJ7u3FdCrdK/giphy.gif';
+    post.dateCreated = Date.now();
+    
     // clear the form
     $scope.title = '';
     $scope.description = '';

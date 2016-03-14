@@ -4,9 +4,9 @@
     <!-- Form to get post information -->
     <form name="new-post" data-toggle="">
       <!-- title -->
-      <input class="new-post" type="text" placeholder="Title" ng-model="title" ngMinlength="10" ngMaxlength="30" ng-required>
+      <input class="new-post" type="text" placeholder="Title" ng-model="title" ng-Minlength="10" ng-Maxlength="50" ng-required>
       <!-- description -->
-      <input class="new-post" type="text" placeholder="Description" ng-model="description" ngMaxlength="250" ng-required>
+      <input class="new-post" type="text" placeholder="Description" ng-model="description" ng-Maxlength="1000" ng-required>
       <!-- color dropdown -->
       <select ng-model="color">
         <option value="">Color</option>
@@ -17,7 +17,7 @@
       <!-- email -->
       <input type="email" placeholder="Email" ng-model="email" ng-required>
       <!-- image upload with filePicker -->
-      <upload-image data-fp-apikey="AORPJD9DRVaMtIJZPTMWPz" data-fp-mimetypes="*/*" data-fp-container="modal" onchange="post.picFile = event.fpfile.url"></upload-image>
+      <upload-image data-fp-apikey="AORPJD9DRVaMtIJZPTMWPz" data-fp-mimetypes="*/*" data-fp-container="modal" ng-model="picFile" onchange="post.picFile = event.fpfile.url"></upload-image>
 
       <!-- submit button -->
       <button class="btn btn-default" ng-click="PostCtrl.formSubmit()">Submit</button>
