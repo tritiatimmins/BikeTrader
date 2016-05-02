@@ -1,42 +1,52 @@
 <!doctype html>
 <html lang="en" ng-app="bikeTrader">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
 
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico" />
+  <script src="libs/angular/angular.js"></script>
 
-    <script src="libs/angular/angular.js"></script>
-
-    <link rel="stylesheet" ng-href="libs/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" ng-href="css/main.css">
-    <title>Bike Trader</title>
+  <link rel="stylesheet" ng-href="libs/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" ng-href="css/main.css">
+  <title>Bike Trader</title>
 
 </head>
 
 <body>
-  
   <header>
-    <nav class="navbar navbar-default">
+
+    <nav class="navbar navbar-default navigation">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="/#/">TODO: PUT LOGO HERE</a>
+          <a class="navbar-brand brand" href="/#/">Bike Trader</a>
         </div>
         <ul class="nav navbar-nav">
-          <li><a href="/#/">Home</a></li>
-          <li><a href="/#/post">Post</a></li>
+          <li><a href="/#/classifieds">Bikes For Sale</a></li>
+          <li><a href="/#/post">Sell A Bike</a></li>
+          <li><a href="/#/events">Cycling Events</a></li>
+          <li><a href="/#/about">About</a></li>
+        </ul>
 
           <!-- TODO: implement login and sign up -->
-          <!-- <li><a href="/#/log-in">Log In</a></li> -->
-          <!-- <li><a href="/#/sign-up">Sign Up</a></li> -->
-          </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="auth"><a href="/#/log-in">Log In</a></li>
+          <li class="auth"><a href="/#/sign-up">Sign Up</a></li>
+        </ul>
+
       </div>
     </nav>
+
   </header>
-  <div class="container">
+
+  
+<!--   <div class="container">
     <h1>The SF Bay Area's Bike Hub Since 2016</h1>
+  </div> -->
 
 
-  </div>
   <div ng-view></div>
+
+  <footer> &copy; 2016 Bay Area Bike Trader </footer>
 
     <!-- angular libraries/dependencies -->
     <script src="libs/angular-mocks/angular-mocks.js"></script>

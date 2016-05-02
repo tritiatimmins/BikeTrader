@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');
-// var methodOverride = require('method-override');
+var methodOverride = require('method-override');
 var mongoose = require('mongoose');
 // var Post refers to mongoose model post.js
 var Post = require('./app/models/post.js');

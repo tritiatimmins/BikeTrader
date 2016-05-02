@@ -19,6 +19,8 @@ angular.module('PostCtrl', [])
     post.email = $scope.email;
     post.picFile = $scope.picFile || 'https://media.giphy.com/media/YFxJ7u3FdCrdK/giphy.gif';
     post.dateCreated = Date.now();
+    console.log('clicked');
+    console.log('user', post);
     
     // clear the form
     $scope.title = '';

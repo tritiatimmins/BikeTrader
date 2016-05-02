@@ -1,4 +1,36 @@
+@font-face {
+  font-family: Lato, sans-serif;
+}
 
+/*******************************
+  navbar
+********************************/
+.navigation {
+  font-family: Lato;
+  font-weight: 100;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.brand {
+  font-family: Pacifico, helvetica, sans-serif;
+  font-size: 36px;
+  border-right: 1px solid black;
+}
+
+/*******************************
+  footer
+********************************/
+footer {
+  font-family: Lato;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+/*******************************
+  Post a bike for sale
+********************************/
 #filePicker {
   position: absolute;
   display: inline-block;
@@ -7,6 +39,7 @@
   z-index: 10000 !important;
 }
 
+
 .ng-invalid {
   border-color: #FA787E;
 }
@@ -14,6 +47,9 @@
   border-color: #78FA89;
 }
 
+/*******************************
+  Classifieds
+********************************/
 .ad {
   /*position: absolute;*/
   /*left: 100px;*/
@@ -26,3 +62,4 @@
   border-width: 2px;
   margin: 1px;
 }
+

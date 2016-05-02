@@ -4,8 +4,17 @@ angular.module('bikeTrader', ['ngRoute', 'angular-filepicker', 'postService', 'H
 
     // front end routes
     
+    //original
+    // .when('/', {
+    //   templateUrl: 'views/home.html',
+    //   controller: 'HomeController'
+    // })
     .when('/', {
-      templateUrl: 'views/home.html',
+      templateUrl: 'views/landing.html'
+    })
+
+    .when('/classifieds', {
+      templateUrl: 'views/classifieds.html',
       controller: 'HomeController'
     })
 
