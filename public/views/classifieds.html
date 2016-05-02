@@ -1,15 +1,29 @@
-<div class="jumbotron text-center" ng-controller="HomeController as HomeCtrl">
-  <div ng-repeat="post in data.posts | orderBy:'dateCreated':reverse" class="container">
-    <div class="ad">
-      <h3>{{ post.title }} &nbsp ${{ post.price }}</h3>
-      <h4>Date Posted: {{ post.dateCreated | date : 'MM/dd/yyyy @ h:mma' }}</h4>
-      <img ng-src="{{ post.picFile }}" height="200px" />
-      <br />
-      <p>
-        Color: {{ post.color }} <br />
-        {{ post.description }} <br />
-        <a href="mailto:{{ post.email }}">Contact Seller</a>
-      </p>
-    </div>
-  </div>
-</div>
+<div class="container-fluid" ng-controller="HomeController as HomeCtrl">
+
+  <!-- make the rows equal and have equal spacing -->
+  <div class="row-eq-height">
+  <!-- review col-lg -->
+    <div class="col-lg-4" ng-repeat="post in data.posts | orderBy:'dateCreated':reverse">
+      <div class="ad">
+
+        <h3 class="ad-title">{{ post.title }} &nbsp; <strong class="price"> ${{post.price}} </strong> </h3>
+
+        <img class="ad-image" ng-src="{{ post.picFile }}"/>
+
+        <div class="ad-description">
+          <p>
+            {{ post.description }}
+          </p>
+
+          <p><strong>Color:</strong> {{ post.color }}</p>
+
+          <p><strong>Posted on: {{ post.dateCreated | date : 'MM/dd/yyyy @ h:mma' }} </strong> </p>
+
+          <strong><a href="mailto:{{ post.email }}">Contact Seller</a></strong>
+
+        </div> 
+ 
+      </div>  <!--ad-->
+    </div>  <!--columns-->
+   </div> <!--row-fluid-->
+</div> <!--container-fluid-->
