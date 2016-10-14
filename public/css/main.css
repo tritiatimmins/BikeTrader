@@ -94,13 +94,63 @@ footer {
 /*******************************
   Post a bike for sale
 ********************************/
+.ad-page {
+  font-family: Lato, sans-serif;
+  color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url(../images/manybikes.jpg) no-repeat;
+  background-size: cover; 
+}
+.tagline {
+  margin: 50px;
+  text-align: center;
+  text-shadow: 2px 1px 1px black;
+  font-weight: bold;
+}
+
+.post-ad {
+  margin: 0 auto;
+  width: 70%;
+  text-align: center;
+  font-size: 24px;
+  background-color: gray;
+  background: rgba(255,255,255, .5);
+  display: block;
+  border-radius: 5px;
+}
+
+.new-post {
+  width: 50%;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px gray;
+}
+
+.new-post.nth-of-type(2) {
+  height: 50px;
+}
+
+.color-selector {
+  color: gray;
+}
 
 #filePicker {
   position: absolute;
-  display: inline-block;
   left: 200px;
   top: 100px;
   z-index: 10000 !important;
+  font-size: 20px;
 }
 
 .ng-invalid {
@@ -108,6 +158,24 @@ footer {
 }
 .ng-valid.ng-dirty {
   border-color: #78FA89;
+}
+
+.submit-ad {
+  margin: 0 auto;
+  display: block;
+  border-radius: 25px;
+  background-color: green;
+  border: 1px solid green;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.submit-ad:hover {
+  background-color: lightblue;
+  border: 1px solid lightblue;
+  box-shadow: 2px 2px 2px gray;
 }
 
 /*******************************

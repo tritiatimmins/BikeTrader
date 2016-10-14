@@ -1,27 +1,37 @@
 
-<div class="row" ng-controller="PostController as PostCtrl">
-  <div class="container">
+<div class="container-fluid ad-page" ng-controller="PostController as PostCtrl">
+
+  <h2 class="tagline">Selling your bike is as easy as writing a short description and uploading a photo!</h2>
+  
+  <div class="post-ad">
+
+
     <!-- Form to get post information -->
     <form name="new-post" data-toggle="">
       <!-- title -->
       <input class="new-post" type="text" placeholder="Title" ng-model="title" ng-Minlength="10" ng-Maxlength="50" ng-required>
       <!-- description -->
-      <input class="new-post" type="text" placeholder="Description" ng-model="description" ng-Maxlength="1000" ng-required>
+      <textarea class="new-post" type="text" placeholder="Description" ng-model="description" ng-Maxlength="1000" ng-required></textarea>
+      
+      <!-- price -->
+      <input class="new-post" type="number" placeholder="Price" ng-model="price" ng-required>
       <!-- color dropdown -->
-      <select ng-model="color">
+      <select class="new-post color-selector" ng-model="color">
         <option value="">Color</option>
         <option ng-repeat="colour in colors">{{ colour }}</option>
       </select>
-      <!-- price -->
-      <input class="new-post" type="number" placeholder="Price" ng-model="price" ng-required>
-      <!-- email -->
-      <input type="email" placeholder="Email" ng-model="email" ng-required>
+
       <!-- image upload with filePicker -->
       <upload-image data-fp-apikey="AORPJD9DRVaMtIJZPTMWPz" data-fp-mimetypes="*/*" data-fp-container="modal" ng-model="picFile" onchange="post.picFile = event.fpfile.url"></upload-image>
 
-      <!-- submit button -->
-      <button class="btn btn-default" ng-click="PostCtrl.formSubmit()">Submit</button>
 
+      <!-- email -->
+      <input class="new-post" type="email" placeholder="Email" ng-model="email" ng-required>
+
+        <!-- submit button -->
+        <button class="btn btn-default submit-ad" ng-click="PostCtrl.formSubmit()">Submit Ad</button>
+
+    
     </form>
   </div>
 </div>
